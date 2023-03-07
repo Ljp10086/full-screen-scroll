@@ -1,0 +1,40 @@
+{
+  "name": "fullscreen-scroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "PORT=3005 rollup -c rollup.config.dev.js -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-html": "^1.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-url": "^8.0.1",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "postcss": "^8.4.21",
+    "rollup-plugin-postcss": "^4.0.2",
+    "prettier": "^2.7.1",
+    "rollup": "^3.15.0",
+    "rollup-plugin-bundle-html": "^0.2.2",
+    "rollup-plugin-serve": "^2.0.2",
+    "rollup-plugin-styles": "^4.0.0",
+    "sass": "^1.58.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {},
+  "keywords": [],
+  "author": "鲁举佩",
+  "license": "ISC"
+}
