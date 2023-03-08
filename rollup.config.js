@@ -7,20 +7,21 @@ import path from 'path';
 import fs from 'fs';
 import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
-// import commonjs from '@rollup/plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
+import { terser } from 'rollup-plugin-terser';
 
 /**@type {import('rollup').RollupOptions} */
 export default {
   input: path.join('src', 'index.ts'),
   output: {
-    file: 'dist',
+    file: 'dist/index.js',
     format: 'umd',
     name: 'FsScroll',
     sourcemap: true
   },
   plugins: [
-    // commonjs(),
+    commonjs(),
     postcss({
       plugins: [autoprefixer],
       sourceMap: 'inline'
@@ -28,6 +29,10 @@ export default {
     typescript(),
     nodeResolve(),
     babel({ babelHelpers: 'bundled' }),
-    url()
+    url(),
+    html({
+      template: () => fs.readFileSync('./index.html')
+    }),
+    terser()
   ]
 };
