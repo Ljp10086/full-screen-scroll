@@ -1,3 +1,4 @@
 export interface Options {
-  container: HTMLElement
+  container: HTMLElement;
+  defaultIndex?: number;
 }

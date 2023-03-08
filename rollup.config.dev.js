@@ -21,6 +21,7 @@ export default {
   },
   plugins: [
     serve({
+      port: 3001,
       contentBase: 'dist'
     }),
     commonjs(),
