@@ -17,7 +17,7 @@ export default class FullPageScreen {
     for (let i = this.sections.length, j = 0; i > 0; i--, j++) {
       const element = this.sections[j];
       element.setAttribute('data-index', (j + 1).toString());
-      element.style.transition = 'all 1s cubic-bezier(0.550, 0.085, 0.000, 0.990)';
+      element.style.transition = 'transform 1s cubic-bezier(0.550, 0.085, 0.000, 0.990)';
       element.style.zIndex = i.toString();
       element.style.position = 'absolute';
       element.addEventListener('wheel', this.onMouseWheel);
